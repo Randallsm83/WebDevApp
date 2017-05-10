@@ -1,0 +1,8 @@
+.DS_Store
+node_modules/
+dist/
+npm-debug.log
+*.deb
+tmp/
+.rvm
+.*.sw[m-p]

@@ -1,0 +1,25 @@
+{
+	"env": {
+		"browser": true
+	},
+	"extends": ["eslint:recommended"],
+	"parser": "babel-eslint",
+	"parserOptions": {
+		"sourceType": "module",
+		"allowImportExportEverywhere": false,
+		"codeFrame": false
+	},
+	"globals": {
+		"LitlePayframeClient": true,
+		"jQuery": true,
+		"$": true,
+		"AppBoot": true
+	},
+	"rules": {
+		"quotes": [2, "single"],
+		"camelcase": 0,
+		"no-console": 1,
+		"indent": [2, "tab"],
+		"jsx-quotes": [2, "prefer-double"]
+	}
+}
