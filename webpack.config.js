@@ -67,7 +67,7 @@ module.exports = {
 	],
 	resolve: {
 		alias: {
-			modernizr$: path.resolve(__dirname, 'lib/.modernizrrc.json')
+			modernizr$: path.resolve(__dirname, '.modernizrrc.json')
 		}
 	},
 	watch: true
