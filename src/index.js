@@ -1,5 +1,5 @@
-/* eslint no-unused-vars: 0, no-console: 0 */
-import styles from './style.css';
+/* eslint no-console: 0 */
+import './style.css';
 
 import Modernizr from 'modernizr';
 
