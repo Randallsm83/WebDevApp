@@ -1,7 +1,8 @@
 # WebDevApp
-Node + Webpack + Babel + ESLint + Modernizr
+Node + Webpack + Babel + HTML(htmlhint) + CSS(Modules, Stylelint,
+		normalize.css) + JS(ESLint) + Modernizr
 
-This is a quick dev environment to start developing a JS app that supports ES6.
+This is a quick dev environment to start developing an app that supports ES6.
 
 ## Install
 
@@ -47,7 +48,15 @@ Babel transpiles our code allowing ES6 and other features. The config file is
 and es2015 plugins are enabled. babel-core and babel-loader are used by
 Webpack to do the work.
 
-### ESLint
+### HTML(htmlhint)
+
+htmlhint..
+
+### CSS(Modules, Stylelint, normalize.css)
+
+css...
+
+### JS(ESLint)
 
 ESLint is a JavaScript linter. The config file is .eslintrc.json. This app uses babel-eslint as a parser. eslint
 and eslint-loader are used by Webpack to do the work.
@@ -55,5 +64,5 @@ and eslint-loader are used by Webpack to do the work.
 ### Modernizr
 
 Modernizr allows for quick HTML5 feature validation. The config file is
-located at lib/modernizrrc.json. modernizr and modernizr-loader are used by
+located at .modernizrrc.json. modernizr and modernizr-loader are used by
 Webpack to do the work.
