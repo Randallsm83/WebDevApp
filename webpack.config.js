@@ -1,6 +1,7 @@
 /* eslint no-undef: 0, no-unused-vars: 0 */
 var webpack = require('webpack');
 var path = require('path');
+var StyleLintPlugin = require('stylelint-webpack-plugin');
 
 var BUILD_DIR = path.resolve(__dirname, 'dist');
 var APP_DIR = path.resolve(__dirname, 'src');
@@ -58,6 +59,12 @@ module.exports = {
 			}
 		],
 	},
+	plugins: [
+		new StyleLintPlugin({
+			configFile: './.stylelintrc',
+			files: ['**/*.css']
+		}),
+	],
 	resolve: {
 		alias: {
 			modernizr$: path.resolve(__dirname, 'lib/.modernizrrc.json')
