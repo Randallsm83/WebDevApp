@@ -26,7 +26,22 @@ module.exports = {
 					emitWarning: true,
 				}
 			},
+			{
+				enforce: 'pre',
+				test: /\.modernizrrc$/,
+				loader: 'modernizr-loader'
+			},
+			{
+				enforce: 'pre',
+				test: /\.modernizrrc(\.json)?$/,
+				loader: 'modernizr-loader!json-loader'
+			}
 		],
+	},
+	resolve: {
+		alias: {
+			modernizr$: path.resolve(__dirname, 'lib/.modernizrrc.json')
+		}
 	},
 	watch: true
 }
