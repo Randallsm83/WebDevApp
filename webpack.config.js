@@ -14,6 +14,21 @@ module.exports = {
 	module: {
 		rules: [
 			{
+				test: /\.html$/,
+				loader: 'html-loader',
+				options: {
+				}
+			},
+			{
+				enforce: 'pre',
+				test: /\.html/,
+				loader: 'htmlhint-loader',
+				exclude: /node_modules/,
+				options: {
+					configFile: './.htmlhintrc'
+				}
+			},
+			{
 				test: /\.js$/,
 				exclude: /node_modules/,
 				loader: 'babel-loader',
