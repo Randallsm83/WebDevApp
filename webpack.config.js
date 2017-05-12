@@ -2,6 +2,7 @@
 var webpack = require('webpack');
 var path = require('path');
 var StyleLintPlugin = require('stylelint-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var BUILD_DIR = path.resolve(__dirname, 'dist');
 var APP_DIR = path.resolve(__dirname, 'src');
@@ -74,6 +75,9 @@ module.exports = {
 			configFile: './.stylelintrc',
 			files: ['**/*.css']
 		}),
+		new HtmlWebpackPlugin({
+			title: 'Web Dev',
+		})
 	],
 	resolve: {
 		alias: {
