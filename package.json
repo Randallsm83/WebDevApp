@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --display-chunks --display-modules",
-    "start": "npm run build & webpack-dev-server --inline"
+    "start": "npm run build & webpack-dev-server --inline --hot"
   },
   "author": "Randall Miller",
   "repository": {
