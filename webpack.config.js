@@ -7,7 +7,7 @@ var BUILD_DIR = path.resolve(__dirname, 'dist');
 var APP_DIR = path.resolve(__dirname, 'src');
 
 module.exports = {
-	entry: APP_DIR + '/index.js',
+	entry: APP_DIR + '/app.js',
 	output: {
 		path: BUILD_DIR,
 		filename: 'bundle.js'
@@ -17,7 +17,9 @@ module.exports = {
 			{
 				test: /\.html$/,
 				loader: 'html-loader',
+				exclude: /node_modules/,
 				options: {
+					minimize: true
 				}
 			},
 			{
@@ -30,13 +32,21 @@ module.exports = {
 				}
 			},
 			{
+				test: /\.css$/,
+				use: [
+					'style-loader',
+					{
+						loader: 'css-loader',
+						options: {
+							minimize: true
+						}
+					}
+				],
+			},
+			{
 				test: /\.js$/,
 				exclude: /node_modules/,
 				loader: 'babel-loader',
-			},
-			{
-				test: /\.css$/,
-				use: [ 'style-loader', 'css-loader' ]
 			},
 			{
 				enforce: 'pre',

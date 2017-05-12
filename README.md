@@ -38,7 +38,7 @@ npm start
 
 This app use Webpack as a bundler and dev server (using webpack-dev-server).
 The config file is webpack.config.json. Running `npm start` launches
-webpack-dev-server. The build process takes src/index.js and bundles it in
+webpack-dev-server. The build process takes src/app.js and bundles it in
 dist/bundle.js.
 
 ### Babel

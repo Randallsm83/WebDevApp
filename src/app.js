@@ -5,7 +5,7 @@ import './style.css';
 
 import Modernizr from 'modernizr';
 
-require('../index.html');
+require('./index.html');
 
 console.log('wut');
 if (Modernizr.video) {
